@@ -7,22 +7,11 @@
         <deviceKey>
           <Key>
             <type value="VIRTUAL_DEVICE_PATH" />
-            <value value="C:\Users\anshk\.android\avd\sample_phone.avd" />
+            <value value="C:\Users\anshk\.android\avd\ansh_phone.avd" />
           </Key>
         </deviceKey>
       </Target>
     </runningDeviceTargetSelectedWithDropDown>
-    <targetSelectedWithDropDown>
-      <Target>
-        <type value="QUICK_BOOT_TARGET" />
-        <deviceKey>
-          <Key>
-            <type value="VIRTUAL_DEVICE_PATH" />
-            <value value="C:\Users\anshk\.android\avd\sample_phone.avd" />
-          </Key>
-        </deviceKey>
-      </Target>
-    </targetSelectedWithDropDown>
-    <timeTargetWasSelectedWithDropDown value="2023-09-11T09:11:19.885602100Z" />
+    <timeTargetWasSelectedWithDropDown value="2023-09-11T11:33:26.013126100Z" />
   </component>
 </project>

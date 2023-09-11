@@ -1,2 +1,4 @@
-package com.example.otpfinal;public class SmsReceiver {
+package com.example.otpfinal;
+
+public class SmsReceiver {
 }

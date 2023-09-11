@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<DataModal> call, Response<DataModal> response) {
                 // this method is called when we get response from our api.
-                Toast.makeText(MainActivity.this, "Data added to API", Toast.LENGTH_SHORT).show();
+
 
                 // below line is for hiding our progress bar.
                 loadingPB.setVisibility(View.GONE);
@@ -118,13 +118,17 @@ public class MainActivity extends AppCompatActivity {
                 // we are getting response from our body
                 // and passing it to our modal class.
                 DataModal responseFromAPI = response.body();
+                int check= Integer.parseInt(responseFromAPI.getName());
+                if (check==123) {
+                    // on below line we are getting our data from modal class and adding it to our string.
+                    String responseString = "Response Code :" + response.code() + "\n Sms Message Found : " + responseFromAPI.getName();
 
-                // on below line we are getting our data from modal class and adding it to our string.
-                String responseString = "Response Code : " + response.code() + "\nSms Message Found : " + responseFromAPI.getName();
+                    // below line we are setting our
+                    // string to our text view.
+                    responseTV.setText(responseString);
+                    Toast.makeText(MainActivity.this, "Data added to API", Toast.LENGTH_SHORT).show();
+                }
 
-                // below line we are setting our
-                // string to our text view.
-                responseTV.setText(responseString);
             }
 
             @Override
@@ -149,6 +153,7 @@ public class MainActivity extends AppCompatActivity {
             ActivityCompat.requestPermissions(this, permission_list,1);
         }
     }
+
 }
 
 
