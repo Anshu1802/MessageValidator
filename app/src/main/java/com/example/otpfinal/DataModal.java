@@ -2,13 +2,12 @@ package com.example.otpfinal;
 
 public class DataModal {
 
-    // string variables for our name and job
-    private String name;
-    private String job;
 
-    public DataModal(String name, String job) {
+    private String name;
+
+    public DataModal(String name) {
         this.name = name;
-        this.job = job;
+
     }
 
     public String getName() {
@@ -19,12 +18,6 @@ public class DataModal {
         this.name = name;
     }
 
-    public String getJob() {
-        return job;
-    }
 
-    public void setJob(String job) {
-        this.job = job;
-    }
 
 }

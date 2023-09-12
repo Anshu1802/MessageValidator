@@ -21,7 +21,7 @@
             android:layout_width="168dp"
             android:layout_height="179dp"
             android:layout_gravity="center"
-            android:background="@drawable/baseline_notifications_none_24">
+            android:background="@drawable/baseline_attach_email_24">
 
         </ImageView>
 
@@ -41,7 +41,8 @@
                 android:hint="Number Verification"
                 android:inputType="text"
                 android:paddingLeft="40dp"
-                android:paddingRight="20dp" />
+                android:paddingRight="20dp"
+                android:textColor="@color/black"/>
         </LinearLayout>
 
 
@@ -59,7 +60,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:text="Send Data to API"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:background="@color/black"/>
 
         <!--text view for displaying our API response-->
         <TextView

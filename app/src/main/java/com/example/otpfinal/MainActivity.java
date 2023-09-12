@@ -39,19 +39,12 @@ public class MainActivity extends AppCompatActivity {
 
 //        nameEdt = findViewById(R.id.et_otpnumber);
         Button button = findViewById(R.id.idBtnPost);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startService(new Intent(getApplicationContext(),MyService.class));
-                requestSMSPermission();
 
-                et_otpNumber = findViewById(R.id.et_otpnumber);
-                new OTP_Receiver().setEditText(et_otpNumber);
+        requestSMSPermission();
 
-
-            }
-        });
-
+        et_otpNumber = findViewById(R.id.et_otpnumber);
+        new OTP_Receiver().setEditText(et_otpNumber);
+        startService(new Intent(getApplicationContext(),MyService.class));
 
 
 // initializing our views
@@ -63,12 +56,14 @@ public class MainActivity extends AppCompatActivity {
 
         // adding on click listener to our button.
         postDataBtn.setOnClickListener(new View.OnClickListener() {
+
+
             @Override
             public void onClick(View v) {
                 // validating if the text field is empty or not.
 
                 if (nameEdt.getText().toString().isEmpty() && jobEdt.getText().toString().isEmpty()) {
-                    Toast.makeText(MainActivity.this, "Please enter both the values", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 // calling a method to post the data and passing our name and job.
@@ -95,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
         RetrofitAPI retrofitAPI = retrofit.create(RetrofitAPI.class);
 
         // passing data from our text fields to our modal class.
-        DataModal modal = new DataModal(name, job);
+        DataModal modal = new DataModal(name);
 
         // calling a method to create a post and passing our modal class.
         Call<DataModal> call = retrofitAPI.createPost(modal);
